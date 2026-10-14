@@ -1,0 +1,21 @@
+# Terraform がダウンロードする provider など
+.terraform/
+
+# 実際のインフラ状態。公開すると構成や ID が漏れる
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# 実バケット名・実 IP を書くファイル。example だけ git で管理する
+*.tfvars
+!*.tfvars.example
+
+.terraformrc
+terraform.rc
+
+*.jpg

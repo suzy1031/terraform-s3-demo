@@ -1,0 +1,10 @@
+# このファイルを terraform.tfvars にコピーしてから、自分の値に書き換える。
+# terraform.tfvars は .gitignore されているので git に載らない。
+
+# 世界で一意な名前にする（すでに使われていると apply が失敗する）
+bucket_name = "your-unique-bucket-name-here"
+
+# 公開 IP の確認例: curl -4 https://checkip.amazonaws.com
+# /32 はその IPv4 アドレス 1 つだけ、という意味。
+# 下の 203.0.113.10 はドキュメント用のダミー。自分の公開 IP に置き換える。
+allowed_cidrs = ["203.0.113.10/32"]
